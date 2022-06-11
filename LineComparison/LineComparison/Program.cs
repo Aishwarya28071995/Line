@@ -30,9 +30,9 @@ namespace LineComparison
             int y3 = Int32.Parse(Console.ReadLine());
             Console.WriteLine("Enter value for y2 for first line");
             int y4 = Int32.Parse(Console.ReadLine());
-            int a = (x2 - x1) * (x2 - x1);
-            int b = (y2 - y1) * (y2 - y1);
-            int c = x + y;
+            int a = (x4 - x3) * (x4 - x3);
+            int b = (y4 - y3) * (y4 - y3);
+            int c = a  + b;
             double length2 = Math.Sqrt(c);
             Console.WriteLine("Length of the first line is" + length2);
 
@@ -40,9 +40,13 @@ namespace LineComparison
             {
                 Console.WriteLine("Both the lines are equal");
             }
+            else if(length1 > length2)
+            {
+                Console.WriteLine("Line1 is greater than line2");
+            }
             else
             {
-                Console.WriteLine("Both the lines are not equal");
+                Console.WriteLine("Line1 is smaller than line2");
             }
 
         }
